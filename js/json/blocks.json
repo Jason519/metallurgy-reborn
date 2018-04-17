@@ -1,1 +1,15 @@
-
+"copper" {
+  "name": "copper", //Name of mineral
+  "ID": { //List of Block IDs
+    "ore": [400, 401, 402], //Ore IDs for overworld, nether, ether (in that order)
+    "block": 403, //Pure block ID value
+    "brick": 404 //Brick ID value, might remove this depending how much block IDs this mod takes
+  },
+  "generation": { //Ore generation, only minerals with an ore block will have this
+    "rarity": 12, //Rarity, dunno the scale (yet)
+    "maxY": 128, //Maximum spawnable Y value
+    "minY": 100 //Minimum spawnable Y value
+  },
+  "hardness": 1, //Block hardness, this will determine how long it takes to mine
+  "blockLevel": 1 //Block Level, this determines what tools can mine it, stone = 0, iron = 1, etc...
+}
