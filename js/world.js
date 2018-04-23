@@ -31,6 +31,14 @@ function modTick(){
 
 
 
-var OreArray = new function(){
-	
+var OreArray = new function(blockId, isNether, isEnder, [generation]){
+	this.blockId = blockId;
+	this.isNether = isNether;
+	this.isEnder = isEnder;
+	this.minY = generation[2];
+	this.maxY = generation[1];
+	this.rarity = generation[0];
+	this.generate = function(){
+		//done for today for personal reasons
+	}
 }
