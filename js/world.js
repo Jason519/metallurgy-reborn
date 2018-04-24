@@ -8,6 +8,13 @@ Level.saveWorldFile = function(filename, content){try {java.io.File(android.os.E
 Level.loadFile = function(filename){var content = "";if (java.io.File( android.os.Environment.getExternalStorageDirectory().getPath() + "/games/com.mojang/minecraftWorlds/" + Level.getWorldDir() + "/" + filename).exists()) {var file = new java.io.File(android.os.Environment.getExternalStorageDirectory().getPath() + "/games/com.mojang/minecraftWorlds/" + Level.getWorldDir() + "/" + filename),fos = new java.io.FileInputStream(file),str = new java.lang.StringBuilder(),ch;while ((ch = fos.read()) != -1) {str.append(java.lang.Character(ch));}content = String(str.toString());fos.close();}return content;};
 ModPE.readFile = function(directory){var content = "";if (java.io.File( android.os.Environment.getExternalStorageDirectory().getPath() + directory).exists()) {var file = new java.io.File(android.os.Environment.getExternalStorageDirectory().getPath() + directory),fos = new java.io.FileInputStream(file),str = new java.lang.StringBuilder(),ch;while ((ch = fos.read()) != -1) {str.append(java.lang.Character(ch));}content = String(str.toString());fos.close();}return content;};
 
+function runMod(){
+	let json_block_data = JSON.parse(ModPE.readFile(mod_directory + "blocks.json"));
+	block_data.push(json_block_data);
+	let json_item_data = JSON.parse(ModPE.readFile(mod_directory + "items.json"));
+	item_data.push(json_item_data);
+}
+
 function newLevel(){
 	var scripts = com.zhuoweizhang.mcpelauncher.ScriptManager.script();
 	if(java.io.File(android.is.Environment.getExternalStorageDirectory().getPath(mod_directory + "items.json").exists()) && java.io.File(android.is.Environment.getExternalStorageDirectory().getPath(mod_directory + "blocks.json").exists())){
@@ -15,26 +22,26 @@ function newLevel(){
 			var script = scripts[i];
 			if(script.name == "blocks" && script.name == "items"){
       				enable_mod = true;
-				let json_block_data = JSON.parse(ModPE.readFile(mod_directory + "blocks.json"));
-				block_data.push(json_block_data);
-				let json_item_data = JSON.parse(ModPE.readFile(mod_directory + "items.json"));
-				item_data.push(json_item_data);
-    			}
+				Level.saveWorldFile("metallurgy_activation", enable_mod);
+    			} else {
+				alert("items.json and blocks.json must be placed in the correct folder (/games/com.mojang/minecraftpe/mods/metallurgy/)");
+				enable_mod = false;
+				Level.saveWorldFile("metallurgy_activation", enable_mod);
+			}
   		}
 	}
+	runMod();
 }
 function modTick(){
   	for(var i in OreArray){
-		OreArray[i].generate();
+		Ores[i].generate();
 	}
 };
 
 
 
-var OreArray = new function([blockId], isNether, isEnder, [generation]){
+var Ores = new function([blockId], [generation]){
 	this.blockId = blockId;
-	this.isNether = isNether;
-	this.isEnder = isEnder;
 	this.minY = generation[2];
 	this.maxY = generation[1];
 	this.rarity = generation[0];
@@ -86,7 +93,7 @@ var OreArray = new function([blockId], isNether, isEnder, [generation]){
 				[1, 1, 1], [-1, -1, -1], [0, 0, 0], //18
 				[-1, 1, 0], [0, -1, 1], [1, 0, -1], //21
 				[1, 1, -1], [-1, 1, 1], [1, -1, 1], //24
-				[1, -1, -1], [-1, 1, -1], [-1, -1, 1]] //27
+				[1, -1, -1], [-1, 1, -1], [-1, -1, 1]]; //27
 		let rarityChance = Math.random() * this.rarity;
 		if(rarityChance >= 1){
 			for(var i in VeinArray){
@@ -100,3 +107,5 @@ var OreArray = new function([blockId], isNether, isEnder, [generation]){
 		}
 	}
 }
+
+function leaveGame(){}
