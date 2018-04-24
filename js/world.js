@@ -32,9 +32,7 @@ function modTick(){
 
 
 var OreArray = new function([blockId], isNether, isEnder, [generation]){
-	this.overworld_ID = blockId[0];
-	this.nether_ID = blockId[1];
-	this.ender_ID = blockId[2];
+	this.blockId = blockId;
 	this.isNether = isNether;
 	this.isEnder = isEnder;
 	this.minY = generation[2];
@@ -50,9 +48,9 @@ var OreArray = new function([blockId], isNether, isEnder, [generation]){
 		}
 		let ChunkSize_Y = function(){
 			if(Math.random() < .5){
-				return Player.getY() + (Math.random() * 128);
+				return Player.getY() + (Math.random() * 127);
 			} else {
-				return Player.getY() - (Math.random() * 128);
+				return Player.getY() - (Math.random() * 127);
 			}
 		}
 		let ChunkSize_Z = function(){
@@ -68,9 +66,34 @@ var OreArray = new function([blockId], isNether, isEnder, [generation]){
 					this.generateVein(chunkSize_X(), chunkSize_Y(), chunkSize_Z());
 				}
 				break;
+			case DimensionId.NETHER:
+				if(Level.getTile(chunkSize_X(), chunkSize_Y(), chunkSize_Z()) ==  87){
+					this.generateVein(chunkSize_X(), chunkSize_Y(), chunkSize_Z());
+				}
+				break;
+			case DimensionId.ENDER:
+				if(Level.getTile(chunkSize_X(), chunkSize_Y(), chunkSize_Z()) == 1){
+					this.generateVein(chunkSize_X(), chunkSize_Y(), chunkSize_Z())
+				}
 		}
 	}
 	this.generateVein = function(x, y, z){
-		//rusty ore gen but it might work
+		let VeinArray = [[1, 0, 0], [0, 1, 0], [0, 0, 1], //3
+				[1, 1, 0], [0, 1, 1], [1, 0, 1], //6
+				[-1, 0, 0], [0, -1, 0], [0, 0, -1], //9
+				[-1, -1, 0], [0, -1, -1], [-1, 0, -1], //12
+				[1, -1, 0], [0, 1, -1], [-1, 0, 1], //15
+				[1, 1, 1], [-1, -1, -1], [0, 0, 0], //18
+				[-1, 1, 0], [0, -1, 1], [1, 0, -1], //21
+				[1, 1, -1], [-1, 1, 1], [1, -1, 1], //24
+				[1, -1, -1], [-1, 1, -1], [-1, -1, 1]] //27
+		let rarityChance = Math.random() * this.rarity;
+		if(rarityChance >= 1){
+			for(var i in VeinArray){
+				if(rarityChance >= 1){
+					Level.setTile(VeinArray[i][0], VeinArray[i][1], VeinArray[i][2], this.blockId[Player.getDimension()]);
+				}
+			}
+		}
 	}
 }
