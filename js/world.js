@@ -91,7 +91,10 @@ var OreArray = new function([blockId], isNether, isEnder, [generation]){
 		if(rarityChance >= 1){
 			for(var i in VeinArray){
 				if(rarityChance >= 1){
-					Level.setTile(VeinArray[i][0], VeinArray[i][1], VeinArray[i][2], this.blockId[Player.getDimension()]);
+					let generate_at_X = x + VeinArray[i][0];
+					let generate_at_Y = y + VeinArray[i][1];
+					let generate_at_Z = z + VeinArray[i][2];
+					Level.setTile(generate_at_X, generate_at_Y, generate_at_Z, this.blockId[Player.getDimension()]);
 				}
 			}
 		}
