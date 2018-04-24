@@ -72,7 +72,7 @@ var OreArray = new function([blockId], isNether, isEnder, [generation]){
 				}
 				break;
 			case DimensionId.ENDER:
-				if(Level.getTile(chunkSize_X(), chunkSize_Y(), chunkSize_Z()) == 1){
+				if(Level.getTile(chunkSize_X(), chunkSize_Y(), chunkSize_Z()) == 121){
 					this.generateVein(chunkSize_X(), chunkSize_Y(), chunkSize_Z())
 				}
 		}
