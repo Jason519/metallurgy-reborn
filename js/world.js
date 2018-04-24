@@ -31,14 +31,46 @@ function modTick(){
 
 
 
-var OreArray = new function(blockId, isNether, isEnder, [generation]){
-	this.blockId = blockId;
+var OreArray = new function([blockId], isNether, isEnder, [generation]){
+	this.overworld_ID = blockId[0];
+	this.nether_ID = blockId[1];
+	this.ender_ID = blockId[2];
 	this.isNether = isNether;
 	this.isEnder = isEnder;
 	this.minY = generation[2];
 	this.maxY = generation[1];
 	this.rarity = generation[0];
 	this.generate = function(){
-		//done for today for personal reasons
+		let ChunkSize_X = function(){
+			if(Math.random() < .5){
+				return Player.getX() + (Math.random() * 15);
+			} else {
+				return Player.getX() - (Math.random() * 15);
+			}
+		}
+		let ChunkSize_Y = function(){
+			if(Math.random() < .5){
+				return Player.getY() + (Math.random() * 128);
+			} else {
+				return Player.getY() - (Math.random() * 128);
+			}
+		}
+		let ChunkSize_Z = function(){
+			if(Math.random() < .5){
+				return Player.getZ() + (Math.random() * 15);
+			} else {
+				return Player.getZ() - (Math.random() * 15);
+			}
+		}
+		switch(Player.getDimension()){
+			case DimensionId.NORMAL:
+				if(Level.getTile(chunkSize_X(), chunkSize_Y(), chunkSize_Z()) == 1){
+					this.generateVein(chunkSize_X(), chunkSize_Y(), chunkSize_Z());
+				}
+				break;
+		}
+	}
+	this.generateVein = function(x, y, z){
+		//rusty ore gen but it might work
 	}
 }
