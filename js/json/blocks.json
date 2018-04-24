@@ -1,15 +1,662 @@
-"copper" {
-  "name": "copper",
-  "ID": { 
-    "ore": [400, 401, 402], 
-    "block": 403, 
-    "brick": 404 
-  },
-  "generation": { 
-    "rarity": 12, 
-    "maxY": 128, 
-    "minY": 100 
-  },
-  "hardness": 1, 
-  "blockLevel": 1 
-}
+[
+	{
+  		"name": "copper",
+  		"ID": {
+			"ore": [400, 401, 402], 
+			"block": 403, 
+    		"brick": 404 
+  		},
+  		"generation": { 
+    		"rarity": 12, 
+    		"maxY": 128, 
+    		"minY": 100 
+  		},
+  		"hardness": 1, 
+  		"blockLevel": 1 
+  	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	},
+	{
+		"name": ,
+		"ID": {
+			"ore": [],
+			"block": ,
+			"brick":
+		},
+		"generation": {
+			"rarity": ,
+			"maxY": ,
+			"minY": 
+		},
+		"hardness": ,
+		"blockLevel": 
+	}
+]
