@@ -1,6 +1,10 @@
 var enable_mod;
 var block_data = [];
 var item_data = [];
+var metallurgy = {};
+
+var OreBuffer = new ArrayBuffer(8);
+var ViewOreBuffer = new Int32Array(OreBuffer);
 
 var mod_directory = "/games/com.mojang/minecraftpe/mods/metallurgy/";
 
@@ -37,8 +41,6 @@ function modTick(){
 		Ores[i].generate();
 	}
 };
-
-
 
 var Ores = new function([blockId], [generation]){
 	this.blockId = blockId;
@@ -103,6 +105,14 @@ var Ores = new function([blockId], [generation]){
 					let generate_at_Z = z + VeinArray[i][2];
 					Level.setTile(generate_at_X, generate_at_Y, generate_at_Z, this.blockId[Player.getDimension()]);
 				}
+			}
+		}
+	}
+	//this doesn't do anything to the actual generation, this part is for data purposes
+	this.saveChunk = function(){
+		var CurrentChunk = () {
+			for(var i = 0; i < 16; i++){
+				//uh
 			}
 		}
 	}
