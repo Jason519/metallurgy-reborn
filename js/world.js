@@ -99,7 +99,7 @@ var Ores = new function([blockId], [generation]){
 		let rarityChance = Math.random() * this.rarity;
 		if(rarityChance >= 1){
 			for(var i in VeinArray){
-				if(rarityChance >= 1){
+				if(rarityChance >= 5){
 					let generate_at_X = x + VeinArray[i][0];
 					let generate_at_Y = y + VeinArray[i][1];
 					let generate_at_Z = z + VeinArray[i][2];
