@@ -3,7 +3,7 @@ var block_data = [];
 var item_data = [];
 var metallurgy = {};
 
-var OreBuffer = new ArrayBuffer(8);
+var OreBuffer = new ArrayBuffer(16);
 var ViewOreBuffer = new Int32Array(OreBuffer);
 
 var mod_directory = "/games/com.mojang/minecraftpe/mods/metallurgy/";
@@ -108,13 +108,31 @@ var Ores = new function([blockId], [generation]){
 			}
 		}
 	}
+	
 	//this doesn't do anything to the actual generation, this part is for data purposes
 	this.saveChunk = function(){
-		var CurrentChunk = () {
-			for(var i = 0; i < 16; i++){
-				//uh
+		var CurrentChunkX, CurrentChunkY, CurrentChunkZ;
+		for(var AllX = -16;  AllX < 16; AllX++){
+			for(var AllY = -80; AllY < 128; AllY++){
+				for(var AllZ = -16; AllZ < 16; AllZ++){
+					CurrentChunkX = Player.getX() + AllX;
+					CurrentChunkY = Player.getY() + AllY;
+					CurrentChunkZ = Player.getz() + AllZ;
+				}
 			}
 		}
+		ViewOreBuffer[0] = CurrentChunkX;
+		ViewOreBuffer[1] = CurrentChunkY;
+		ViewOreBuffer[2] = CurrentChunkZ;
+		
+		let string = "";
+		if(ViewOreBuffer[0].length > 1){
+			for(var i in ViewOreBuffer[0]){
+				var locations_array = [ViewOreBuffer[0][i], ViewOreBuffer[1][i], ViewOreBuffer[2][i]]
+				string+=locations.join(",") + ";";
+			}
+		}
+		Level.saveWorldFile(".SpawnedChunks", string);
 	}
 }
 
