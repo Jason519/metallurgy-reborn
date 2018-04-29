@@ -12,11 +12,18 @@ Level.saveWorldFile = function(filename, content){try {java.io.File(android.os.E
 Level.loadFile = function(filename){var content = "";if (java.io.File( android.os.Environment.getExternalStorageDirectory().getPath() + "/games/com.mojang/minecraftWorlds/" + Level.getWorldDir() + "/" + filename).exists()) {var file = new java.io.File(android.os.Environment.getExternalStorageDirectory().getPath() + "/games/com.mojang/minecraftWorlds/" + Level.getWorldDir() + "/" + filename),fos = new java.io.FileInputStream(file),str = new java.lang.StringBuilder(),ch;while ((ch = fos.read()) != -1) {str.append(java.lang.Character(ch));}content = String(str.toString());fos.close();}return content;};
 ModPE.readFile = function(directory){var content = "";if (java.io.File( android.os.Environment.getExternalStorageDirectory().getPath() + directory).exists()) {var file = new java.io.File(android.os.Environment.getExternalStorageDirectory().getPath() + directory),fos = new java.io.FileInputStream(file),str = new java.lang.StringBuilder(),ch;while ((ch = fos.read()) != -1) {str.append(java.lang.Character(ch));}content = String(str.toString());fos.close();}return content;};
 
+metallurgy.initBlockData = function(){
+	
+}
+
 function runMod(){
 	let json_block_data = JSON.parse(ModPE.readFile(mod_directory + "blocks.json"));
 	block_data.push(json_block_data);
 	let json_item_data = JSON.parse(ModPE.readFile(mod_directory + "items.json"));
 	item_data.push(json_item_data);
+	if(block_data.length > 0 && item_data.length > 1){
+		metallurgy.initBlockData();
+	}
 }
 
 function newLevel(){
@@ -34,15 +41,18 @@ function newLevel(){
 			}
   		}
 	}
-	runMod();
+	if(Level.getTile(Player.getX(), Player.getY() - 1, Player.getZ()) > 0){
+		runMod();
+	}
 }
+
 function modTick(){
-  	for(var i in OreArray){
+  	for(var i in Ores){
 		Ores[i].generate();
 	}
-};
+}
 
-var Ores = new function([blockId], [generation]){
+var Ores = function([blockId], [generation]){
 	this.blockId = blockId;
 	this.minY = generation[2];
 	this.maxY = generation[1];
