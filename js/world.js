@@ -13,7 +13,12 @@ Level.loadFile = function(filename){var content = "";if (java.io.File( android.o
 ModPE.readFile = function(directory){var content = "";if (java.io.File( android.os.Environment.getExternalStorageDirectory().getPath() + directory).exists()) {var file = new java.io.File(android.os.Environment.getExternalStorageDirectory().getPath() + directory),fos = new java.io.FileInputStream(file),str = new java.lang.StringBuilder(),ch;while ((ch = fos.read()) != -1) {str.append(java.lang.Character(ch));}content = String(str.toString());fos.close();}return content;};
 
 metallurgy.initBlockData = function(){
-	
+	for(var i in block_data){
+		if(block_data[i].generation != undefined){
+			let block = block_data[i];	
+			Ores(block.ID.ore, block.generation);
+		}
+	}
 }
 
 function runMod(){
@@ -21,7 +26,7 @@ function runMod(){
 	block_data.push(json_block_data);
 	let json_item_data = JSON.parse(ModPE.readFile(mod_directory + "items.json"));
 	item_data.push(json_item_data);
-	if(block_data.length > 0 && item_data.length > 1){
+	if(block_data.length > 0 && item_data.length > 0){
 		metallurgy.initBlockData();
 	}
 }
